@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Posters</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div padding class="poster-info">
+	<ion-grid>
+		<ion-row *ngFor="let posterItem of posters" align-items-end>
+			<ion-col no-padding text-wrap>
+				<ion-item no-padding>
+					<ion-label>
+						{{posterItem.title}}
+						<button class="session-txt-bold" (click)="previewPDF(posterItem.file_url, posterItem.file_name)" no-padding>
+							<ion-icon item-right name="cloud-download"></ion-icon>
+						</button>
+
+						<p *ngFor="let presenter of posterItem.presenters">
+							{{presenter.name}}
+						</p>
+
+						<div *ngIf="posterItem.MeetingSessionID > 0">
+							<button class="session-txt-bold" (click)="goToSessionDetail(posterItem.MeetingSessionID)">
+								(Abstract chosen for oral presentation)
+							</button>
+						</div>
+
+<!--
+						<ion-thumbnail item-left>
+							<button (click)="previewPDF(posterItem.file_url, posterItem.file_name)" no-padding>
+								<img src="{{posterItem.file_url}}" alt="Item preview" />
+							</button>
+						</ion-thumbnail>
+-->
+						<!--<div>{{posterItem.content}}</div>-->
+					</ion-label>
+				</ion-item>
+			</ion-col>
+
+		</ion-row>
+	</ion-grid>
+
+  </div>
+</ion-content>

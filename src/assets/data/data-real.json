@@ -1,0 +1,239 @@
+{
+
+  "schedule": [
+    {
+      "id": 1,
+      "name": "Gastrointestinal Motility and Neurogastroenterology in Clinical Practice (Day 1)",
+      "location": "New York Hilton Midtown, New York, NY",
+      "day": "2017-08-17",
+      "groups": [
+        {
+          "time": "8:00 am",
+
+
+		  name:
+		  endTime:
+		  moderatorNames: []
+		  location:
+	      iff session.count == 0, only show group details
+          
+          "sessions": [
+            {
+              "id": 1,
+              "name": "Breakfast",
+              "timeStart": "8:15 am",
+              "timeEnd": "9:00 am",
+              "location": "Main hallway",
+              "tracks": ["Food"]
+            }
+          ]
+        },
+        {
+          "time": "9:00 am",
+          "sessions": [
+            {
+              "id": 2,
+              "name": "Introduction to Cloud Mobile",
+              "location": "Room 2203",
+              "description": "How mobile devices and browsers work on the computers. Is it real or are these small devices just the smaller version of a cloud machine? Is the cloud just really someone else's computer? Find out more.",
+              "speakerNames": ["Drew Better"],
+              "timeStart": "9:00 am",
+              "timeEnd": "9:30 am",
+              "tracks": ["Mobile", "Cloud"]
+            },
+            {
+              "id": 3,
+              "name": "Getting started with Mobile",
+              "location": "Room 2202",
+              "description": "Mobile devices and browsers are now advanced enough that developers can build apps using open web technologies like HTML5, Javascript, and CSS. This course will get into some of the gritty details for all.",
+              "speakerNames": ["Bob Barker"],
+              "timeStart": "9:00 am",
+              "timeEnd": "9:45 am",
+              "tracks": ["Mobile"]
+            },
+            {
+              "id": 4,
+              "name": "Tooling for Mobile",
+              "location": "Room 2201",
+              "description": "Tools are a big deal. In this session we will explore all the tools and turn common items into great tools of the trade. This may include any types of objects or none.",
+              "speakerNames": ["Drew Better"],
+              "timeStart": "9:45 am",
+              "timeEnd": "10:00 am",
+              "tracks": ["Tooling"]
+            }
+          ]
+        },
+        {
+          "time": "10:00 am",
+          "sessions": [
+            {
+              "id": 5,
+              "name": "Migrating to Next",
+              "location": "Room 2201",
+              "description": "We will be focused on how to install Next, how to start a new app, and how to serve/emulate/run the application on a device.",
+              "speakerNames": ["Drew Better", "Ben Frank"],
+              "timeStart": "10:00 am",
+              "timeEnd": "10:15 am",
+              "tracks": ["Next"]
+            },
+            {
+              "id": 6,
+              "name": "To be Next",
+              "location": "Room 2202",
+              "description": "What will it take to create the Next? This session will show that and more.",
+              "speakerNames": ["Ben Frank", "Jim Jones"],
+              "timeStart": "10:15 am",
+              "timeEnd": "10:30 am",
+              "tracks": ["Design"]
+            },
+            {
+              "id": 7,
+              "name": "Designing the Good Stuff",
+              "location": "Room 2202",
+              "description": "Creating good stuff is hard from design to completion. The tools to do this are tricky and a little wacky. We will describe one way to make it easier.",
+              "speakerNames": ["Jim Jones"],
+              "timeStart": "10:30 am",
+              "timeEnd": "11:00 am",
+              "tracks": ["Design", "Tooling"]
+            }
+          ]
+        },
+        {
+          "time": "3:00 pm",
+          "sessions": [
+            {
+              "id": 8,
+              "name": "Directives in Politics",
+              "location": "Room 2201",
+              "description": "Dive into the where things are heading. How will they get there? This session is fun for the whole family.",
+              "speakerNames": ["Bob Barker"],
+              "timeStart": "3:00 pm",
+              "timeEnd": "3:30 pm",
+              "tracks": ["Politics"]
+            },
+            {
+              "id": 9,
+              "name": "Mobile States",
+              "location": "Room 2202",
+              "description": "The states of mobile is ever change. Here we discuss the next steps and what states will be revealed with the mobile transition. Many have tried and few will succeed; there is no try, just do.",
+              "speakerNames": ["Ben Frank"],
+              "timeStart": "3:30 pm",
+              "timeEnd": "4:00 pm",
+              "tracks": ["Navigation"]
+            }
+          ]
+        }
+      ]
+    },
+  
+  
+    {
+      "id": 2,
+      "name": "Gastrointestinal Motility and Neurogastroenterology in Clinical Practice (Day 2)",
+      "location": "New York Hilton Midtown, New York, NY",
+      "day": "2017-08-18",
+      "groups": [
+        {
+          "time": "8:00 am",
+          "sessions": [
+            {
+              "id": 20,
+              "name": "Breakfast",
+              "timeStart": "8:00 am",
+              "timeEnd": "9:00 am",
+              "location": "Second hallway",
+              "tracks": ["Food"]
+            }
+          ]
+        },
+        {
+          "time": "9:00 am",
+          "sessions": [
+            {
+              "id": 21,
+              "name": "Final day Mobile Roundup",
+              "location": "Room 2203",
+              "description": "Go over the technical take aways for the conference. We will get into many things.",
+              "speakerNames": ["Drew Better"],
+              "timeStart": "9:00 am",
+              "timeEnd": "11:00 am",
+              "tracks": ["Mobile"]
+            },
+            {
+              "id": 22,
+              "name": "Final day Design Roundup",
+              "location": "Room 2202",
+              "description": "Go over the design take aways for the conference. We will get into many things.",
+              "speakerNames": ["Bob Barker"],
+              "timeStart": "9:00 am",
+              "timeEnd": "10:45 am",
+              "tracks": ["Design"]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  
+
+  "speakers": [
+    {
+      "name": "Bob Barker",
+      "profilePic": "https://avatars.io/facebook/neuharthr",
+      "twitter": "bobbarker",
+      "about": "Bob loves using the power of software to make technology more accessible to people around the world. When not writing code or obsessing over a crazy new idea, he can be found watching the Justice League, riding Snowmobiles in a very safe manner, and hanging out with his wife and two dogs.",
+      "location": "Minneapolis, MN",
+      "email": "bob@barker.com",
+      "phone": "+1-763-245-9999"
+
+    },
+    {
+      "name": "Jim Jones",
+      "profilePic": "https://avatars.io/instagram/bigjim",
+      "twitter": "Jim_Jones",
+      "about": "A musician, DJ, sound engineer, photographer, and self proclaimed fashion nerd, Jim seems to find a new obsession daily.  At Microsoft, you'll find him working on the Platform services, making sure everyone's notifications arrive safe and sound.",
+      "location": "Minneapolis, MN",
+      "email": "jim@jones.com",
+      "phone": "+1-763-333-9999"
+    },
+    {
+      "name": "Drew Better",
+      "profilePic": "https://avatars.io/facebook/ryan",
+      "twitter": "generichandle",
+      "about": "On most days, you will find Drew devising dazzling demos, drafting documentation, and consuming copious quantities of caffeine. He is obsessed with clarity, and making transformers easy and fun to use. When not working, you might find him walking around the UOM campus, where he is studying philosophy and computer science.",
+      "location": "Minneapolis, MN",
+      "email": "drew@better.com",
+      "phone": "+1-763-111-9999"
+    },
+    {
+      "name": "Ben Frank",
+      "profilePic": "https://avatars.io/facebook/bff",
+      "twitter": "benfrank",
+      "about": "Ben is a user interface designer and front end tinkerer based in Minneapolis, MN. He’s fascinated with making delightful human and machine interactions.",
+      "location": "Minneapolis, MN",
+      "email": "ben@frank.com",
+      "phone": "+1-763-555-9999"
+    }
+  ],
+
+
+  "map": [
+    {
+      "name": "Terrace Convention Center",
+      "lat": 43.071584,
+      "lng": -89.380120,
+      "center": true
+    },
+    {
+      "name": "ANMS Headquarters",
+      "lat": 43.074395,
+      "lng": -89.381056
+    },
+    {
+      "name": "Afterparty - Brocach Irish Pub",
+      "lat": 43.07336,
+      "lng": -89.38335
+    }
+  ]
+
+}

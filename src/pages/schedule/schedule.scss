@@ -1,0 +1,44 @@
+$categories: (
+ anms: #C72030,
+ general: #5FF111,
+ treatment: #8E8D93,
+ reception: #FE4C52,
+ services: #FD8B2D,
+ exhibit: #FED035,
+ demonstration: #69BB7B,
+ food: #3BC7C4,
+ diagnosis: #B16BE3,
+ navigation: #6600CC,
+);
+
+@function auxiliary-categories() {
+  @return map-remove($categories);
+}
+
+page-schedule {
+  @each $track, $value in auxiliary-categories() {
+   ion-item-sliding[track=#{$track}] ion-label {
+     border-left: 2px solid $value;
+     padding-left: 10px;
+   }
+  }
+ 
+ 
+}
+
+//default track color
+ion-item-sliding ion-label {
+	border-left: 2px solid color($colors, dark);
+	padding-left: 10px;
+}
+
+.group-row-bold {
+	@extend .group-row;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.group-row {
+	background-color: #000000;
+	color: #FFFFFF;
+}

@@ -1,0 +1,86 @@
+{
+    "schedule": [
+        {
+            "name": "August 16, 2019",
+            "location": "Swissotel, Chicago, Illinois",
+            "day": "2019-08-16",
+            "id": "9",
+            "groups": [
+                {
+                    "name": "Session 1",
+                    "endTime": "9:00 am",
+                    "location": "Ballroom",
+                    "id": "78",
+                    "time": "8:00 am",
+                    "sessions": [
+                        {
+                            "name": "Welcome",
+                            "location": "Ballroom",
+                            "description": "Welcome",
+                            "id": "133",
+                            "timeStart": "8:00 am",
+                            "timeEnd": "8:15 am",
+                            "speakerNames": [],
+                            "tracks": [],
+                            "resources": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "speakers": [
+        {
+            "name": "Test Ing, MD, PhD",
+            "profilePic": "",
+            "twitter": "",
+            "email": "test@test.com",
+            "phone": "1112223333",
+            "about": "Hello.",
+            "institution": "University of Life",
+            "name_first": "Test",
+            "name_last": "Ing",
+            "name_suffix": "MD, PhD",
+            "id": "97"
+        }
+    ],
+    "map": [],
+    "posters": [
+        {
+            "MeetingPosterID": "1",
+            "title": "All About GERD",
+            "presenters": [
+                {
+                    "name": "Timmy Treble",
+                    "email": "tim.treble@gmail.com"
+                },
+                {
+                    "name": "Bob Builder",
+                    "email": ""
+                }
+            ],
+            "content": "All about GERD. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. More gerd.",
+            "posterNumber": "222",
+            "MeetingSessionID": "0",
+            "id": "1",
+            "file_url": "https://motilitysociety.org/mobile/meeting/resource/index.php?resource=95",
+            "file_name": "GERD.pdf"
+        },
+        {
+            "MeetingPosterID": "2",
+            "title": "IBS and you",
+            "presenters": [
+                {
+                    "name": "Tom Johnson",
+                    "email": ""
+                }
+            ],
+            "content": "Here's some content. \"Content\"",
+            "posterNumber": "331",
+            "MeetingSessionID": "133",
+            "id": "2",
+            "file_url": "https://motilitysociety.org/mobile/meeting/resource/index.php?resource=96",
+            "file_name": "IBS.pdf"
+        }
+    ]
+}

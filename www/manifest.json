@@ -1,0 +1,13 @@
+{
+  "name": "ANMS App",
+  "short_name": "ANMS App",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "assets/img/anms-logo.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "background_color": "#387ef5",
+  "theme_color": "#387ef5"
+}

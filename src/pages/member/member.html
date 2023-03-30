@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Members</ion-title>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div padding class="about-info">
+    <h4>ANMS Brochures</h4>
+
+		<ion-grid>
+			<ion-row *ngFor="let contentItem of content" align-items-end>
+				<ion-col width-80 no-padding text-wrap>
+					<ion-item no-padding>
+						<ion-checkbox item-left [(ngModel)]="contentItem.checked" checked="contentItem.checked"></ion-checkbox>
+						<ion-label>{{contentItem.name}}</ion-label>
+					</ion-item>
+				</ion-col>
+
+				<ion-col width-20 no-padding>
+					<ion-item no-padding>
+						<ion-thumbnail item-right>
+							<button (click)="previewPDF(contentItem.location, contentItem.filename + '.pdf')" no-padding>
+								<img src="http://www.motilitysociety.org/mobile/img/{{contentItem.filename}}.png" alt="Item preview" />
+							</button>
+						</ion-thumbnail>
+					</ion-item>
+				</ion-col>
+
+			</ion-row>
+		</ion-grid>
+		
+
+		<form [formGroup]="emailFormGrp" (ngSubmit)="emailPatient(emailForm)">
+			<ion-row>
+				<ion-input placeholder="Email Address" formControlName="email" name="emailAddress" [(ngModel)]="email.emailAddress"
+						type="text" clearInput required></ion-input>
+	
+			    <button ion-button>
+					<ion-icon name="send" class="icon-button" ></ion-icon>
+				</button>
+			</ion-row>
+		</form>
+  </div>
+</ion-content>

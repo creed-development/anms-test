@@ -1,0 +1,11 @@
+.session-txt-bold {
+	@extend .session-txt;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.session-txt {
+	background-color: #FFFFFF;
+	color: #000000;
+	padding: 0;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "ANMSApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "id": "e408747c"
+}

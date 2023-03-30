@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-segment [(ngModel)]="segment" (ionChange)="doRefresh()">
+      <ion-segment-button value="all">
+        All
+      </ion-segment-button>
+      <ion-segment-button value="favorites">
+        Favorites
+      </ion-segment-button>
+    </ion-segment>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentFilter()">
+        <ion-icon ios="ios-options-outline" md="md-options"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-searchbar color="primary"
+                   [(ngModel)]="queryText"
+                   (ionInput)="doRefresh()"
+                   placeholder="Search">
+    </ion-searchbar>    
+    <ion-buttons [hidden]="confData.totalDays <= 1" end>
+	    <button ion-button icon-only (click)="changeDayIndex()">
+	      Day {{dayIndex+1}} of {{confData.totalDays}} ({{dayIndexDay}})
+	    </button>
+	</ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list #scheduleList>
+
+    <ion-item-group *ngFor="let group of groups" [hidden]="group.hide">
+
+      <ion-item-divider sticky class="group-row">
+        <ion-label>
+          <ion-row class="group-row-bold">
+          	{{group.time}} &mdash; {{group.endTime}}
+          </ion-row>
+          <ion-row class="group-row-bold" text-wrap>
+          	{{group.name}} &bull; {{group.location}}
+          </ion-row>
+          <ion-row *ngIf="group.moderatorNames" text-wrap>
+          	Moderators: {{group.moderatorNames}}
+          </ion-row>
+        </ion-label>
+      </ion-item-divider>
+
+      <ion-item-sliding *ngFor="let session of group.sessions" #slidingItem [attr.track]="session.tracks[0] | lowercase" [hidden]="session.hide">
+
+        <button ion-item (click)="goToSessionDetail(session)" text-wrap>
+          <h3>{{session.name}}</h3>
+          <p>
+            {{session.timeStart}} &mdash; {{session.timeEnd}} ({{session.location}})
+          </p>
+          <p *ngFor="let speaker of session.speakers">
+            &bull; {{this.confData.getSpeakerNameFull(speaker)}}
+          </p>
+        </button>
+
+        <ion-item-options>
+          <button ion-button color="favorite" (click)="addFavorite(slidingItem, session)" *ngIf="segment === 'all'">
+            Favorite
+          </button>
+          <button ion-button color="danger" (click)="removeFavorite(slidingItem, session, 'Remove Favorite')" *ngIf="segment === 'favorites'">
+            Remove
+          </button>
+        </ion-item-options>
+
+      </ion-item-sliding>
+
+    </ion-item-group>
+
+  </ion-list>
+
+  <ion-list-header [hidden]="shownSessions > 0 || !confData.hasConferenceData()">
+      No Sessions Found
+  </ion-list-header>
+
+  <ion-list-header [hidden]="confData.hasConferenceData()" text-wrap>
+      <ion-icon name="time"></ion-icon>
+      No conferences at this time, check back soon!
+  </ion-list-header>
+
+  <ion-fab bottom right #fab>
+    <button ion-fab (click)="shareSocial('Generic', fab)"><ion-icon name="share"></ion-icon></button>
+  </ion-fab>
+
+</ion-content>

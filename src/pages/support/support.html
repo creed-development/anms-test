@@ -1,0 +1,37 @@
+<ion-header>
+
+	<ion-navbar>
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title>Contact</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+	<ion-list no-lines>
+		<button ion-item (click)="open('mailto:admin@motilitysociety.org')">
+			<ion-icon item-left name="mail"></ion-icon>
+			admin@motilitysociety.org
+		</button>
+		
+		<button ion-item (click)="open('tel:17346991130')">
+			<ion-icon item-left name="call"></ion-icon>
+			734-699-1130
+		</button>
+
+		<button ion-item (click)="open('http://motilitysociety.org')">
+			<ion-icon item-left name="globe"></ion-icon>
+			motilitysociety.org
+		</button>
+
+		<button ion-item (click)="open('maps://?ll=42.213459,-83.4907557')">
+			<ion-icon item-left name="pin"></ion-icon>
+			45685 Harmony Lane, Belleville, MI 48111
+		</button>
+	</ion-list>
+
+</ion-content>

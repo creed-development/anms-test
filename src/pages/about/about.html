@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>About</ion-title>
+    
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="about-header">
+    <img src="assets/img/anms-logo.png" alt="ANMS logo">
+  </div>
+  <div padding class="about-info">
+    <h4>About the ANMS</h4>
+
+    <p ion-text [hidden]="alertMessage == null" padding-left>      
+      <span class="alert-msg" [innerHTML]=alertMessage></span>
+    </p>
+    <p>
+      The American Neurogastroenterology and Motility Society (ANMS) is an organization established in 
+      1980 dedicated to the study of neurogastroenterology and gastrointestinal motility and functional GI
+      disorders.
+    </p>
+
+    
+	<ion-row responsive-sm>
+		<ion-col>
+			<button ion-button (click)="close('https://motilitysociety.org/application.php');" type="submit" block>Join</button>
+		</ion-col>
+		<ion-col>
+			<button ion-button (click)="close('https://motilitysociety.org/donation_form.php');" color="primary" block>Donate</button>
+		</ion-col>
+	</ion-row>
+
+  </div>
+</ion-content>

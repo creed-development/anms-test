@@ -1,0 +1,28 @@
+
+
+.about-header {
+  width: 100%;
+  min-height: 150px;
+  text-align: center;
+}
+
+.about-header img {
+  min-height: 115px;
+  padding: 20px 0;
+}
+
+.about-info p {
+  color: #697072;
+  text-align: left;
+}
+
+.alert-msg p {
+  background-color: #d9534f;
+  border-color: transparent;
+  color: #fff;
+  text-align: left;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
